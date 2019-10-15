@@ -8,6 +8,7 @@ function getCadastros() {
         { id: "ncm", nome: "NCM", icon: "check" },
         { id: "cest", nome: "CEST", icon: "check" },
         { id: "regicao-municipio", nome: "Região/Municipio", icon: "check" },
+        { id: "tipo-de-pagamento", nome: "Tipo de Pagamento", icon: "check" },
     ];
 }
 
@@ -46,6 +47,9 @@ function preencherInformacoesAdicionais(id) {
     }
     if (id === "regicao-municipio") {
         return preencherConfiguracoesRegiaoMunicipio();
+    }
+    if (id === "tipo-de-pagamento") {
+        return preencherConfiguracoesTipoDePagamento();
     }
 }
 
@@ -95,6 +99,15 @@ function preencherConfiguracoesNcm() {
 }
 
 function preencherConfiguracoesRegiaoMunicipio() {
+    return `
+    <div class="collection">
+        <a href="#!" class="collection-item active">Listagem</a>
+        <a href="#!" class="collection-item">Cadastro</a>
+    </div>
+    `;
+}
+
+function preencherConfiguracoesTipoDePagamento() {
     return `
     <div class="collection">
         <a href="#!" class="collection-item active">Listagem</a>
