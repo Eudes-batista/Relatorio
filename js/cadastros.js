@@ -40,6 +40,9 @@ function preencherInformacoesAdicionais(id) {
     if (id === "ncm") {
         return preencherConfiguracoesNcm();
     }
+    if (id === "cest") {
+        return preencherConfiguracoesCest();
+    }
 }
 
 function preencherConfiguracoesEmpresa() {
@@ -79,6 +82,15 @@ function preencherConfiguracoesCfop() {
 }
 
 function preencherConfiguracoesNcm() {
+    return `
+    <div class="collection">
+        <a href="#!" class="collection-item active">Listagem</a>
+        <a href="#!" class="collection-item">Cadastro</a>
+    </div>
+    `;
+}
+
+function preencherConfiguracoesCest() {
     return `
     <div class="collection">
         <a href="#!" class="collection-item active">Listagem</a>
