@@ -1,5 +1,5 @@
 async function listarCadastros(colletion) {
-    let response = await fetch('./../jsons/cadastros-principais/aplicacoes.json');
+    let response = await fetch('https://eudes-batista.github.io/Relatorio/jsons/cadastros-principais/aplicacoes.json');
     let conteudo = await response.json();
     preencherCadastros(colletion, conteudo);
 }
