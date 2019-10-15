@@ -7,6 +7,7 @@ function getCadastros() {
         { id: "cfop", nome: "CFOP", icon: "check" },
         { id: "ncm", nome: "NCM", icon: "check" },
         { id: "cest", nome: "CEST", icon: "check" },
+        { id: "regicao-municipio", nome: "Região/Municipio", icon: "check" },
     ];
 }
 
@@ -42,6 +43,9 @@ function preencherInformacoesAdicionais(id) {
     }
     if (id === "cest") {
         return preencherConfiguracoesCest();
+    }
+    if (id === "regicao-municipio") {
+        return preencherConfiguracoesRegiaoMunicipio();
     }
 }
 
@@ -90,7 +94,7 @@ function preencherConfiguracoesNcm() {
     `;
 }
 
-function preencherConfiguracoesCest() {
+function preencherConfiguracoesRegiaoMunicipio() {
     return `
     <div class="collection">
         <a href="#!" class="collection-item active">Listagem</a>
