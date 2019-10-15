@@ -12,7 +12,7 @@ function preencherTabela(tbody, modulos) {
     tbody.innerHTML += linhas;
 }
 async function listarCadastros(tbody) {
-    let response = await fetch('./../jsons/modulos/modulos.json');
+    let response = await fetch('https://eudes-batista.github.io/Relatorio/jsons/modulos/modulos.json');
     let conteudo = await response.json();
     preencherTabela(tbody, conteudo);
 }
