@@ -8,11 +8,15 @@
     <title>Relatorio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/tabela.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/cadastros.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
         window.onload = function() {
-            let tbody = document.getElementById('linhas-conteudo');
-            preencherTabela(tbody);
+            let collection = document.getElementById('collection');
+            preencherCadastros(collection);
         };
     </script>
 </head>
@@ -22,19 +26,13 @@
         <div class="col s12 m12">
             <div class="card grey lighten-4">
                 <div class="card-content">
-                    <span class="card-title">Projeto FrontEnd</span>
-                    <p>Relatorio de modulos e cadastros</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Modulos</th>
-                            </tr>
-                        </thead>
-                        <tbody id="linhas-conteudo"></tbody>
-                    </table>
+                    <span class="card-title">Cadastros Principais</span>
+                    <ul class="collapsible" id="collection">
+
+                    </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#">Visualizar Todos</a>
+                    <a href="index.html">Voltar</a>
                 </div>
             </div>
         </div>
