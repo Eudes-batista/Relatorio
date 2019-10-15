@@ -107,6 +107,15 @@ function preencherConfiguracoesRegiaoMunicipio() {
     `;
 }
 
+function preencherConfiguracoesCest() {
+    return `
+    <div class="collection">
+        <a href="#!" class="collection-item active">Listagem</a>
+        <a href="#!" class="collection-item">Cadastro</a>
+    </div>
+    `;
+}
+
 function preencherConfiguracoesTipoDePagamento() {
     return `
     <div class="collection">
