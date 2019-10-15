@@ -1,0 +1,9 @@
+[
+    { "id": "empresa", "nome": "Empresa", "icon": "remove", "status": "Pendente" },
+    { "id": "usuario", "nome": "Usuario", "icon": "check", "status": "Pendente" },
+    { "id": "cfop", "nome": "CFOP", "icon": "check", "status": "Em andamento" },
+    { "id": "ncm", "nome": "NCM", "icon": "check", "status": "Em andamento" },
+    { "id": "cest", "nome": "CEST", "icon": "check", "status": "Em andamento" },
+    { "id": "regicao-municipio", "nome": "Região/Municipio", "icon": "check", "status": "Em andamento" },
+    { "id": "tipo-de-pagamento", "nome": "Tipo de Pagamento", "icon": "check", "status": "Em andamento" }
+]

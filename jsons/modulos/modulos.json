@@ -1,0 +1,6 @@
+[
+    { "id": "cadastros", "nome": "Cadastros" },
+    { "id": "configuracoes", "nome": "Configurações" },
+    { "id": "compras", "nome": "Compras" },
+    { "id": "vendas", "nome": "Vendas" }
+]

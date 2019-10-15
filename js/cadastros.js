@@ -1,24 +1,16 @@
-let cadastros = getCadastros();
-
-function getCadastros() {
-    return [
-        { id: "empresa", nome: "Empresa", icon: "remove" },
-        { id: "usuario", nome: "Usuario", icon: "check" },
-        { id: "cfop", nome: "CFOP", icon: "check" },
-        { id: "ncm", nome: "NCM", icon: "check" },
-        { id: "cest", nome: "CEST", icon: "check" },
-        { id: "regicao-municipio", nome: "Região/Municipio", icon: "check" },
-        { id: "tipo-de-pagamento", nome: "Tipo de Pagamento", icon: "check" },
-    ];
+async function listarCadastros(colletion) {
+    let response = await fetch('./../jsons/cadastros-principais/aplicacoes.json');
+    let conteudo = await response.json();
+    preencherCadastros(colletion, conteudo);
 }
 
-function preencherCadastros(colletion) {
+function preencherCadastros(colletion, cadastros) {
     let linhas = "";
     for (let cadastro of cadastros) {
         linhas += `       
         <li>
             <div class="collapsible-header"><i class="material-icons">${cadastro.icon}</i>
-                <a href="${cadastro.id}.html" class="collection-item">${cadastro.nome}</a>
+                <a href="${cadastro.id}.html" class="collection-item">${cadastro.nome} - ${cadastro.status}</a>
             </div>
              <div class="collapsible-body">
                 ${preencherInformacoesAdicionais(cadastro.id)}

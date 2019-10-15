@@ -1,6 +1,4 @@
-let modulos = getModulos();
-
-function preencherTabela(tbody) {
+function preencherTabela(tbody, modulos) {
     let linhas = "";
     for (let modulo of modulos) {
         linhas += `
@@ -13,12 +11,8 @@ function preencherTabela(tbody) {
     }
     tbody.innerHTML += linhas;
 }
-
-function getModulos() {
-    return [
-        { id: "cadastros", nome: "Cadastros" },
-        { id: "configuracoes", nome: "Configurações" },
-        { id: "compras", nome: "Compras" },
-        { id: "vendas", nome: "Vendas" },
-    ];
+async function listarCadastros(tbody) {
+    let response = await fetch('./../jsons/modulos/modulos.json');
+    let conteudo = await response.json();
+    preencherTabela(tbody, conteudo);
 }
